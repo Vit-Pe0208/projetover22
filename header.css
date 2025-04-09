@@ -1,0 +1,371 @@
+@font-face {
+    font-family: 'Blank River';
+    src: url('./fonts/Blank\ River.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+header {
+    background-color: black;
+    /* determinar cor de fundo preta*/
+    color: white;
+    /* determinar cor branca nas letras*/
+    text-align: center;
+    /* alinha título do cabeçalho*/
+    font-family: 'Poppins', sans-serif;
+}
+
+#titulocabecalho a,
+#titulocabecalho a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+/* div do cabeçalho*/
+#cabecalho {
+    display: flex;
+    /* determinar flexiblidade para os blocos internos da div cabeçalho*/
+    flex-direction: row;
+    /* Alinhar em linhas oa divs internas*/
+    justify-content: right;
+    align-items: center;
+    /* colocar as divs internas na direita*/
+    padding: 30px;
+    /* estabelecer margem interna das div cabeçalho*/
+    gap: 200px;
+    width: 100%;
+   
+}
+
+/* título do cabeçalho*/
+#cabecalho #titulocabecalho h1 {
+    font-family: 'Blank River', sans-serif;
+    /*determinando a fonte: 'fonteDotitulo' para o título do cabeçalho*/
+}
+
+/*input do tipo search da div searchBar interna da div cabeçalho*/
+#cabecalho #searchBar {
+    width: 300px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Input search*/
+#cabecalho #searchBar input[type='search'] {
+    position: absolute;
+    /*posição absoluta em relação a div searchBar*/
+    height: 100%;
+    /*Altura de 100%*/
+    width: 100%;
+    /*Largura de 100%*/
+    border: none;
+    /*sem borda no input*/
+    font-size: 10px;
+    /*Tamanho da letra*/
+    padding-left: 10px;
+    /*Espaçãmento em relação à esquerda*/
+    border-radius: 10px;
+    /*arredeondamento do input*/
+    padding: 15px;
+}
+
+/*Estlizando a lupa dentro do input*/
+#cabecalho #searchBar i {
+    position: absolute;
+    right: 5px;
+    font-size: 10px;
+    color: gray;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+/*ícones do cabeçalho*/
+#cabecalhoButtons img {
+    padding: 10px;
+    /*estabelecer tamanho das imagens*/
+    width: 50px;
+}
+
+/*Div da menu superior de header*/
+#menuSuperior {
+    color: rgb(238, 234, 234);
+    /*estabelecer cores brancas para as letras*/
+    padding: 20px;
+    /*estabelecer espaçamento interno da div #menuSuperio*/
+    border-top: 2px dashed;
+    /*estabelecer linha pontilhada para separar o menu do cabeçalho*/
+    white-space: nowrap;
+
+}
+
+/*Div para a organização das listas da div #menuSuperior */
+#menuSuperior ul {
+    display: flex;
+    /* estabelecer alinhamento flexível paras as li do ul*/
+    justify-content: space-around;
+    
+
+}
+
+/*listas da menu superior*/
+#menuSuperior ul li {
+    list-style: none;
+    /* retirando pontinhos das listas*/
+    padding-inline: 10px;
+    
+}
+
+/*estilizar tag a do menu superior*/
+#menuSuperior ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Div para o banner */
+#bannerSuperior img {
+    width: 100%;
+    /*Estabelecer tamanho 100% do banner de largura na div #bannerSuperior */
+    height: 100%;
+    /*Estabelecer tamanho 100% do banner de altura na div #bannerSuperior */
+}
+
+/*Div para o menu inferior */
+#menuInferior {
+    background-color: black;
+    /*Estabelecer cor preta de fundo*/
+    color: white;
+    /*Estabelecer cores brancas*/
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*Div para a organização das listas da div #menuInferior */
+#menuInferior ul {
+    display: inline-flex;
+    /*Espaçamento entra as li do ul */
+    padding: 20px;
+    /*espaçamento interno da  ul */
+}
+
+/*estilizar listas do menu inferior*/
+#menuInferior ul li {
+    margin-inline: 20px;
+    list-style: none;
+    /*Retirar os pontinhos das listas*/
+}
+
+/*estlizar tag a do menu inferior*/
+#menuInferior ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+#menuSuperior ul li:hover,
+#menuInferior ul li:hover {
+    font-weight: bold;
+}
+
+
+/*Modificações feito por Vitor Pessoa Silva*/
+/*Divs para responsividade*/
+#cabecalhomobile{
+    display: none;
+}
+#cabecalhomobilesearch{
+    display: none;
+}
+#menuSuperiormobile {
+    display: none;
+}
+
+/*Responsividade para mobiles/celulares. max 450 px*/
+@media (max-width: 450px){
+    header{
+       background-color: blueviolet;
+    }
+    #menuSuperior{
+        display: none;
+    }
+   
+    #menuInferior{
+        display: none;
+    }
+    #bannerSuperior{
+        display: none;
+    }
+    #cabecalho{
+        display: none;
+    }
+    #cabecalhomobile{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      background-color: blueviolet;
+      padding: 10px;
+
+    }
+    #cabecalhomobile #cabecalhoButtons{
+       
+        width: 50%;
+        text-align: right;
+       background-color: blueviolet;
+
+    }
+    
+    #cabecalhomobile #titulocabecalho{
+        
+        width: 50%;
+        text-align: left;
+       
+
+    }
+    #cabecalhomobile #titulocabecalho h1{
+        font-family: 'Blank River', sans-serif; 
+        
+    }
+    #cabecalhomobilesearch{
+        display: flex;
+        background-color: blueviolet;
+       
+    }
+   
+    
+    #cabecalhomobilesearch  #searchBar {
+        width: 100%;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+       
+       
+        
+       
+    }
+    #cabecalhomobilesearch  #searchBar input[type='search'] {
+        position: absolute;
+        /*posição absoluta em relação a div searchBar*/
+        height: 100%;
+        /*Altura de 100%*/
+        width: 80%;
+        /*Largura de 100%*/
+        border: none;
+        /*sem borda no input*/
+        font-size: 10px;
+        /*Tamanho da letra*/
+        padding-left: 10px;
+        /*Espaçãmento em relação à esquerda*/
+        border-radius: 10px;
+        /*arredeondamento do input*/
+        padding: 15px;
+        
+    }
+    #cabecalhomobilesearch #searchBar i {
+        position: absolute;
+        right: 5px;
+        font-size: 10px;
+        color: gray;
+        cursor: pointer;
+        margin-right: 45px;
+        
+    }
+    #menuSuperiormobile{
+        display: flex;
+        margin-top: 20px;
+        border-top: 2px dashed;
+        background-color: blueviolet;
+
+    }
+    #menuSuperiormobile ul{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        margin-top: 20px;
+       
+        
+      
+    }
+    #menuSuperiormobile ul li {
+        list-style: none;
+        flex-grow: 1;
+        flex-basis: 200;
+       
+       
+    }
+    #menuSuperiormobile img{
+        width: 100px;
+        border-radius: 500px;
+
+
+    }
+
+}
+
+ /*Responsividade para tablets 768*/   
+ @media (min-width: 1024px){
+    body{
+        background-color: black;
+        padding: 20px;
+    }
+ }
+
+@media (max-width: 200px){
+    #cabecalhomobile #titulocabecalho h1{
+        font-family: 'Blank River', sans-serif; 
+        margin-left: 20px;
+        
+    }
+
+    #cabecalhomobilesearch{
+        display: flex;
+    }
+    
+    #cabecalhomobilesearch  #searchBar {
+        width: 80%;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        
+       
+    }
+    #cabecalhomobilesearch  #searchBar input[type='search'] {
+        position: absolute;
+        /*posição absoluta em relação a div searchBar*/
+        height: 100%;
+        /*Altura de 100%*/
+        width: 70%;
+        /*Largura de 100%*/
+        border: none;
+        /*sem borda no input*/
+        font-size: 10px;
+        /*Tamanho da letra*/
+        padding-left: 10px;
+        /*Espaçãmento em relação à esquerda*/
+        border-radius: 10px;
+        /*arredeondamento do input*/
+        padding: 15px;
+        
+    }
+    #cabecalhomobilesearch #searchBar i {
+        position: absolute;
+        right: 5px;
+        font-size: 10px;
+        color: gray;
+        cursor: pointer;
+        margin-right: 7px;
+    }
+
+}

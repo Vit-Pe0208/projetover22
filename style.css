@@ -1,0 +1,557 @@
+@font-face {
+    font-family: 'Blank River';
+    src: url('./fonts/Blank\ River.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+header {
+    background-color: black;
+    /* determinar cor de fundo preta*/
+    color: white;
+    /* determinar cor branca nas letras*/
+    text-align: center;
+    /* alinha título do cabeçalho*/
+    font-family: 'Poppins', sans-serif;
+}
+
+#titulocabecalho a,
+#titulocabecalho a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+/* div do cabeçalho*/
+#cabecalho {
+    display: flex;
+    /* determinar flexiblidade para os blocos internos da div cabeçalho*/
+    flex-direction: row;
+    /* Alinhar em linhas oa divs internas*/
+    justify-content: right;
+    align-items: center;
+    /* colocar as divs internas na direita*/
+    padding: 30px;
+    /* estabelecer margem interna das div cabeçalho*/
+    gap: 200px;
+    width: 100%;
+}
+
+/* título do cabeçalho*/
+#cabecalho #titulocabecalho h1 {
+    font-family: 'Blank River', sans-serif;
+    /*determinando a fonte: 'fonteDotitulo' para o título do cabeçalho*/
+}
+
+/*input do tipo search da div searchBar interna da div cabeçalho*/
+#cabecalho #searchBar {
+    width: 300px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Input search*/
+#cabecalho #searchBar input[type='search'] {
+    position: absolute;
+    /*posição absoluta em relação a div searchBar*/
+    height: 100%;
+    /*Altura de 100%*/
+    width: 100%;
+    /*Largura de 100%*/
+    border: none;
+    /*sem borda no input*/
+    font-size: 10px;
+    /*Tamanho da letra*/
+    padding-left: 10px;
+    /*Espaçãmento em relação à esquerda*/
+    border-radius: 10px;
+    /*arredeondamento do input*/
+    padding: 15px;
+}
+
+/*Estlizando a lupa dentro do input*/
+#cabecalho #searchBar i {
+    position: absolute;
+    right: 5px;
+    font-size: 10px;
+    color: gray;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+/*ícones do cabeçalho*/
+#cabecalhoButtons img {
+    padding: 10px;
+    /*estabelecer tamanho das imagens*/
+
+    /*estabelecer 9px de margem em relação ao topo da página*/
+    width: 50px;
+}
+
+/*Div da menu superior de header*/
+#menuSuperior {
+    color: rgb(238, 234, 234);
+    /*estabelecer cores brancas para as letras*/
+    padding: 20px;
+    /*estabelecer espaçamento interno da div #menuSuperio*/
+    border-top: 2px dashed;
+    /*estabelecer linha pontilhada para separar o menu do cabeçalho*/
+    white-space: nowrap;
+}
+
+/*Div para a organização das listas da div #menuSuperior */
+#menuSuperior ul {
+    display: flex;
+    /* estabelecer alinhamento flexível paras as li do ul*/
+    justify-content: space-around;
+}
+
+/*listas da menu superior*/
+#menuSuperior ul li {
+    list-style: none;
+    /* retirando pontinhos das listas*/
+    padding-inline: 10px;
+}
+
+/*estilizar tag a do menu superior*/
+#menuSuperior ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Div para o banner */
+#bannerSuperior img {
+    width: 100%;
+    /*Estabelecer tamanho 100% do banner de largura na div #bannerSuperior */
+    height: 100%;
+    /*Estabelecer tamanho 100% do banner de altura na div #bannerSuperior */
+}
+
+/*Div para o menu inferior */
+#menuInferior {
+    background-color: black;
+    /*Estabelecer cor preta de fundo*/
+    color: white;
+    /*Estabelecer cores brancas*/
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*Div para a organização das listas da div #menuInferior */
+#menuInferior ul {
+    display: inline-flex;
+    /*Espaçamento entra as li do ul */
+    padding: 20px;
+    /*espaçamento interno da  ul */
+}
+
+/*estilizar listas do menu inferior*/
+#menuInferior ul li {
+    margin-inline: 20px;
+    list-style: none;
+    /*Retirar os pontinhos das listas*/
+}
+
+/*estlizar tag a do menu inferior*/
+#menuInferior ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+#menuSuperior ul li:hover,
+#menuInferior ul li:hover {
+    font-weight: bold;
+}
+
+/* lancamentos */
+
+.titulo {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 20px;
+}
+
+.titulo img {
+    max-width: 450px;
+    width: 100%;
+}
+
+.tituloTexto {
+    height: 260px;
+    width: 600px;
+    background-image: url('../img/lançamentos-titulo.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    font-family: 'Blank River', sans-serif;
+    font-size: 86pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.titulo hr {
+    width: 100%;
+    border: dashed 2px;
+    position: relative;
+    bottom: 80px;
+    z-index: -1;
+}
+
+/* carrosel */
+
+#carrossel {
+    max-width: 1300px;
+    width: 90%;
+    margin: auto;
+    margin-block: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.setaCarrosel {
+    width: 32px;
+}
+
+/* card */
+
+.card {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cardIMG {
+    width: 100%;
+    height: 400px;
+    background-color: #A5A5A5;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+}
+
+.card .imgPoster {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.cardContent {
+    max-width: 330px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+.cardColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    line-height: 30px;
+}
+
+.cardSubtitulo {
+    color: #7F7F7F;
+}
+
+/* BANNER INFERIOR */
+
+#bannerInferior {
+    max-width: 1920px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#bannerInferior img {
+    width: 100%;
+}
+
+/* BUttons Banner */
+
+#bannerCards {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.cardBannerInferior {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1B0935;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Blank RIver', sans-serif;
+    font-size: larger;
+    width: 300px;
+}
+
+.cardBannerInferior img {
+    width: 80px;
+}
+
+#spanCardBanner {
+    text-decoration: underline 2px;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* linha pontilhada */
+
+#linhaPontilhada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-block: 20px;
+}
+
+#linhaPontilhada hr {
+    width: 100%;
+    border: dashed 2px;
+}
+
+/* Aside */
+
+aside {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+}
+
+#asideLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 500px;
+    padding: 10px;
+    font-size: larger;
+    border-right: dashed 2px;
+}
+
+#asideLeftContent {
+    width: 80%;
+}
+
+#asideLeft h2 {
+    font-size: 32pt;
+    margin-bottom: 10px;
+}
+
+#cardStores {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#linha-pontilhada-vertical {
+    max-height: 600px;
+    height: 100%;
+}
+
+#cardStores img {
+    max-width: 200px;
+    width: 100%;
+}
+
+#asideRigth {
+    width: 500px;
+}
+
+#asideRigth img {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* FOOTER */
+
+/*Rodapé da página*/
+footer {
+    width: 100%;
+    /*Rodapé ocupando 100% de largura da página*/
+    display: flex;
+    /*Flexiblizando o conteúdo interno do footer*/
+    flex-direction: row;
+    /*Estabelecendo um direção alinhada dos blocos internos do footer */
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Título do tipo h1 do footer lado esquerdo*/
+footer h1 {
+    text-align: center;
+    /*Centralizando o título*/
+    font-family: 'Blank River', sans-serif;
+    /*estabelenco fonte: 'fonteDotitulo' para o título*/
+    margin-top: 20px;
+}
+
+/*Div esquerda do footer*/
+#footerLeft {
+    background-color: black;
+    /*estabelencedo cor de fundo preta para o footer esquerdo*/
+    color: white;
+    /*estabelecendo cores de letras brancas para o footer esquerdo*/
+    width: 100%;
+    /*estabelenco largura de 95% da página para o footer esquerdo*/
+    margin: auto;
+}
+
+/*Conteúdo do footer*/
+#footerLeftColumns {
+    display: flex;
+    /*Flexiblizando as 4 colunas*/
+    flex-direction: row;
+    /*Alinhando as quatro colunas*/
+    margin: auto;
+    /*Estabelecendo 10% de distanciamento do lado esquerdo*/
+    align-items: start;
+    justify-content: space-around;
+}
+
+/*Conteúdo das linhas das colunas*/
+.columFooter ul li {
+    list-style: none;
+    /*Retirando os pontinhos das listas*/
+    margin-top: 50px;
+    /*espaçamento entre as linhas*/
+}
+
+/*Div para a estilização dos ícones*/
+#footerLeftButtons table {
+    margin-left: 30%;
+    /*distancia da div para a margem esquerda dos ícones*/
+    margin-top: 30px;
+    /*distância em relação ao topo dos ícones*/
+}
+
+/*div do conteúdo dos ícones*/
+#footerLeftButtons table tr th {
+    padding: 10px;
+    /*estabelecendo espaçamento entre os ícones*/
+}
+
+/*Div direita do footer*/
+#footerRigth {
+    background-color: rgb(63, 4, 63);
+    /*Cor de fundo da div direita do footer*/
+    width: 40%;
+    /*largura do footer da direita*/
+}
+
+/*Título do tipo h3 do footer direito*/
+#tituloRodepeRight {
+    margin-top: 25px;
+    /*distanciamento em relação ao topo do título*/
+    margin-left: 30px;
+    /*distancimento em relação a margem esquerda do título*/
+    font-size: 20px;
+    /*fonte da letra do título*/
+    text-align: justify;
+    /*título justificado*/
+    color: white;
+    /*cor da letra do título*/
+}
+
+/*paragrafo do tipo h3 do footer direito*/
+#paragrafoRodapeRight {
+    margin-top: 50px;
+    /*Distanciamento em relação ao topo do paragrafo*/
+    margin-left: 30px;
+    /*distancimento em relação a margem esquerda do paragrafo*/
+    font-size: 20px;
+    /*fonte da letra do paragrafo*/
+    text-align: justify;
+    /*paragrafo justificado*/
+    color: white;
+    /*cor da letra do paragrafo*/
+}
+
+#inputFooterDireito {
+    width: 80%;
+    height: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+/*Input do tipo text do footer direito*/
+#footerRigth #inputFooterDireito input[type='email'] {
+    position: absolute;
+    /*posição absoluta em relação a div searchBar*/
+    height: 100%;
+    /*Altura de 100%*/
+    width: 100%;
+    /*Largura de 100%*/
+    border: none;
+    /*sem borda no input*/
+    font-size: 10px;
+    /*Tamanho da letra*/
+    padding-left: 10px;
+    /*Espaçãmento em relação à esquerda*/
+    border-radius: 10px;
+    /*arredeondamento do input*/
+    padding: 20px;
+}
+
+/*Estilizar o icone de email dentro do input*/
+#footerRigth #inputFooterDireito i {
+    position: absolute;
+    right: 5px;
+    font-size: 15px;
+    color: rgb(7, 7, 7);
+    cursor: pointer;
+    margin-right: 5px;
+    height: 10px;
+}
